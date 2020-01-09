@@ -1,8 +1,8 @@
 // functions
 const getRandomColor = () => {
   var letters = '0123456789ABCDEF';
-  var color = '#';
-  for (var i = 0; i < 6; i++) {
+  var color = '#00';
+  for (var i = 0; i < 4; i++) {
     color += letters[Math.floor(Math.random() * 16)];
   }
   return color;
@@ -39,8 +39,8 @@ const randomNumber = (max, min) => {
 }
 
 
-var cols = 5;
-var rows = 5;
+var cols = 4;
+var rows = 3;
 var countRound = 1;
 
 builBoard(cols, rows)
