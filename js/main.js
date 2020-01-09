@@ -8,7 +8,7 @@ const getRandomColor = () => {
   return color;
 }
 
-const builBoard = (cols, rows, defaultValue) => {
+const builBoard = (cols, rows) => {
   var arr = [];
   var grid = ""
   var number = 1;
@@ -19,7 +19,7 @@ const builBoard = (cols, rows, defaultValue) => {
     arr.push([]);
     arr[i].push(new Array(cols));
     for (var j = 0; j < cols; j++) {
-      arr[i][j] = defaultValue;
+      arr[i][j] = number;
       var colorRandom = getRandomColor();
       row += "<button style='background-color:" + colorRandom + "' data-id='"+number+"' class='js__buttonFred' id='btn" + number + "'>" + number + "</button>"
       number++
@@ -43,11 +43,8 @@ var cols = 5;
 var rows = 5;
 var countRound = 1;
 
-builBoard(cols, rows, '')
+builBoard(cols, rows)
 
-const showSecuency = (array) => {
-
-}
 
 var arraySecuency = []
 var numberRound = 0;
