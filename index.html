@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Fred</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
 
 </head>
-<body>
+
+<body id="body">
 
   <div class="controls pt-2 pb-2">
     <div class="container">
 
       <div class="row">
-        <div class="col-12 d-flex justify-content-between" >
-          <button class="btn btn-primary  start" id="startButton">Iniciar</button>
-          <p class="score" id="score">0</p>
+        <div class="col-12 d-flex justify-content-between">
+          <button class="btn btn-primary  btn__start start" id="startButton">Start</button>
+          <p class="score" id="score">0<small>pts</small>  </p>
+          <!-- Dark / Light mode -->
+          <div class="mode__board">
+            <i>Light</i>
+            <label class="switch">
+              <input type="checkbox" id="mode" >
+               <span class="slider round"></span> 
+            </label>
+            <i>Dark</i>
+          </div>
         </div>
-        
+
+      </div>
     </div>
-  </div>
-    
+
   </div>
   <div class="gridFred" id="gridFred">
     <div class="row">
@@ -30,10 +44,36 @@
       <button>1</button>
       <button>1</button>
     </div>
-    
+  </div>
+
+  <!-- modals -->
+  <div class="modal__start open">
+    <div class="container">
+      <p>Haz click en <b>START</b> para comenzar el juego!!!</p>
+    </div>
+  </div>
+
+  <div class="modal__succes">
+    <div class="container">
+      <p>Haz acertado!!! Preparate para la siguiente </p>
+    </div>
+  </div>
+
+  <div class="modal__youTurn">
+    <div class="container">
+      <p>Tu turno, dale</p>
+    </div>
+  </div>
+
+
+  <div class="modal__gameOver">
+    <div class="container">
+      <p><b>Has perdido!!!</b>  Tu score es de <b class="score__over"></b></p>
+    </div>
   </div>
 
   <script src="js/main.js"></script>
-  
+
 </body>
+
 </html>
