@@ -85,6 +85,7 @@ const paintSecuency = (secuencyArr) =>{
 
 var startbutton = document.getElementById('startButton')
 startbutton.addEventListener('click', function () {
+  arraySecuency=[]
   startRound(numberRound)
 })
 
@@ -104,8 +105,11 @@ document.querySelectorAll('.js__buttonFred').forEach(item => {
         console.log('juego exitoso')
         
         setTimeout(function(){
+          alert('OLV!!, c rifo')
+          score ++ 
+          document.getElementById("score").innerText=score
           startRound()
-        }, 3000)
+                  }, 1)
       }
     }else{
       gameOver()
@@ -119,5 +123,10 @@ document.querySelectorAll('.js__buttonFred').forEach(item => {
 })
 
 const gameOver = () =>{
+  pulsedSecuency = 0 
+  arraySecuency = []
+  score = 0
+  alert('Estas bien wey!')
+  document.getElementById("score").innerText="0"
   console.log('estas wey')
 }
