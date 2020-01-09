@@ -59,7 +59,6 @@ const startRound = () => {
 
   var numberRandom = randomNumber(9, 1);
   arraySecuency.push(numberRandom)
-  console.log(arraySecuency)
   paintSecuency(arraySecuency)
   numberRound++;
   start = true;
@@ -114,12 +113,11 @@ document.querySelectorAll('.js__buttonFred').forEach(item => {
       console.log(pulsed)
       if (idPressed === pulsed) {
         console.log('numeros' + idPressed + arraySecuency[pulsedSecuency - 1])
-        console.log('chido')
         if (pulsedSecuency === arraySecuency.length) {
           console.log('juego exitoso')
 
           setTimeout(function () {
-            console.log('OLV!!, c rifo')
+            console.log('success')
             score++
             document.getElementById("score").innerHTML = `${score}<small>pts</small>`
             document.getElementsByClassName("modal__succes")[0].classList.add('open')
@@ -132,14 +130,12 @@ document.querySelectorAll('.js__buttonFred').forEach(item => {
       } else {
         gameOver()
       }
-      console.log(item, pulsedSecuency)
     }
   })
 })
 
 const gameOver = () => {
   
-  //alert('Estas bien wey!')
   document.getElementById("score").innerText = "0"
   document.getElementsByClassName("modal__gameOver")[0].classList.add('open')
   document.getElementsByClassName("score__over")[0].innerText = score;
