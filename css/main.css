@@ -14,9 +14,22 @@ body{
   transform: translate(-50%,-50%);
 }
 .gridFred button{
-  width: 50px;
-  height: 50px;
-  border: none;
+  width: 100px;
+  height: 100px;
+  border: 4px solid transparent;
   margin: .5rem;
   border-radius:2px; 
+  cursor: pointer;
+  transition: all linear .25S;
+  color: #fff;
+  font-weight: 600;
+  font-size: 2rem;
+}
+.gridFred button:hover{
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+.gridFred button.active{
+  border: 4px solid transparent;
+  box-shadow: 0 0 40px rgba(255,255,255,.7) inset;
+  transform: scale(.9,.9);
 }
