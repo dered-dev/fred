@@ -284,3 +284,30 @@ input:checked+.slider:before {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
+
+
+@media screen and (max-width: 640px){
+  .gridFred button{
+    width: 60px;
+    height: 60px;
+    font-size: 1em;
+  }
+  .score{
+    font-size: 2rem;
+    text-align: center;
+  }
+  .mode__board i{
+    display: none;
+  }
+  .modal__gameOver .container p, .modal__youTurn .container p, .modal__succes .container p, .modal__start .container p{
+    font-size: .875em;
+  }
+  .modal__gameOver, .modal__succes, .modal__youTurn, .modal__start{
+    bottom: -8rem;
+  }
+  .btn__start{
+    width: 60px;
+    height: 60px;
+    font-size: .6em;
+  }
+}
