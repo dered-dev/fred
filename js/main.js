@@ -42,7 +42,7 @@ const randomNumber = (max, min) => {
 
 
 var cols = 4;
-var rows = 3;
+var rows = 4;
 var countRound = 1;
 
 builBoard(cols, rows)
@@ -62,6 +62,7 @@ const startRound = () => {
   paintSecuency(arraySecuency)
   numberRound++;
   start = true;
+  console.log(arraySecuency)
 
 
 }
@@ -115,7 +116,6 @@ document.querySelectorAll('.js__buttonFred').forEach(item => {
         console.log('numeros' + idPressed + arraySecuency[pulsedSecuency - 1])
         if (pulsedSecuency === arraySecuency.length) {
           console.log('juego exitoso')
-
           setTimeout(function () {
             console.log('success')
             score++
@@ -126,6 +126,7 @@ document.querySelectorAll('.js__buttonFred').forEach(item => {
               startRound()
             },2000)
           }, 1)
+
         }
       } else {
         gameOver()

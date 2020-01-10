@@ -149,6 +149,20 @@ body.dark .mode__board i {
   transition: .4s;
   border: 1px solid silver;
 }
+body .slider{
+  background-image: url('../img/astronomy.svg');
+  background-repeat: no-repeat;
+  background-position: 90% center;
+  background-size: 20px;
+}
+body.dark .slider{
+  background-image: url('../img/sun.svg');
+  background-repeat: no-repeat;
+  background-position: 4px center;
+  background-size: 20px;
+}
+
+
 
 .slider:before {
   position: absolute;
@@ -162,7 +176,7 @@ body.dark .mode__board i {
   transition: .4s;
 }
 
-input:checked+.slider {
+input:checked + .slider {
   background-color: #000E04;
 }
 
